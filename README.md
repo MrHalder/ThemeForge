@@ -5,7 +5,7 @@
 <h1 align="center">ThemeForge</h1>
 
 <p align="center">
-  <strong>AI-powered iOS icon & wallpaper generator with post-processing pipeline</strong>
+  <strong>✨ AI-powered iOS icon & wallpaper generator with a precision post-processing pipeline</strong>
 </p>
 
 <p align="center">
@@ -30,7 +30,7 @@
 
 ---
 
-## What is ThemeForge?
+## ✨ What is ThemeForge?
 
 ThemeForge takes a screenshot of your iPhone home screen (or a manual app list), detects every app, generates AI-themed icons and wallpapers using Gemini 2.5 Flash / Gemini 3 Pro Image / Higgsfield, post-processes them with iOS-accurate superellipse corners and sharpening, then packages everything into a downloadable zip with a manifest and step-by-step setup guide.
 
@@ -40,11 +40,34 @@ Built for the 10% of iPhone users who actually care about how their home screen 
   <img src="assets/demo-flow.svg" alt="ThemeForge Flow" width="90%" />
 </p>
 
+## 🖼️ Screenshots
+
+<table>
+  <tr>
+    <td><img src="assets/screenshots/step-1-setup.png" alt="Step 1 - Setup" width="100%" /></td>
+    <td><img src="assets/screenshots/step-2-detect.png" alt="Step 2 - Detect" width="100%" /></td>
+  </tr>
+  <tr>
+    <td><img src="assets/screenshots/step-3-theme.png" alt="Step 3 - Theme" width="100%" /></td>
+    <td><img src="assets/screenshots/step-4-generate.png" alt="Step 4 - Generate" width="100%" /></td>
+  </tr>
+  <tr>
+    <td colspan="2"><img src="assets/screenshots/step-5-download.png" alt="Step 5 - Download" width="100%" /></td>
+  </tr>
+</table>
+
+### At a Glance
+
+- 🧠 Multi-provider generation: Gemini + Higgsfield
+- 🎯 iOS-accurate superellipse corners and crisp sharpening
+- 🧩 Screenshot detection or manual app entry
+- 📦 Exports icons, wallpapers, manifest, and setup guide
+
 ---
 
-## Features
+## ✨ Features
 
-### Core Pipeline
+### 🧱 Core Pipeline
 
 | Step            | What Happens                                                                                                             |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------ |
@@ -54,7 +77,7 @@ Built for the 10% of iPhone users who actually care about how their home screen 
 | **4. Generate** | AI generates individual icons per app + 2 matching wallpapers. Progress tracked per-icon with retry queue for failures   |
 | **5. Download** | Preview all icons, download individually or as a zip containing icons/, wallpapers/, manifest.json, and SETUP_GUIDE.md   |
 
-### Post-Processing Pipeline
+### 🛠️ Post-Processing Pipeline
 
 Every generated icon passes through three stages before export:
 
@@ -68,13 +91,13 @@ Raw AI Output → Square Crop → iOS Superellipse Corners → Unsharp Mask Shar
 
 Can be toggled off for raw output.
 
-### Focus Mode Integration
+### 🎯 Focus Mode Integration
 
 - Assign apps to **Work** or **Home** buckets during the theme step
 - Manifest JSON maps each app → icon file → URL scheme → focus mode
 - Setup guide includes exact steps for configuring iOS Focus Mode auto-switching by time/location
 
-### Dual Provider Support
+### 🔌 Dual Provider Support
 
 | Provider       | Model                                           | Speed        | Cost                | Best For                              |
 | -------------- | ----------------------------------------------- | ------------ | ------------------- | ------------------------------------- |
@@ -84,7 +107,7 @@ Can be toggled off for raw output.
 
 ---
 
-## Architecture
+## 🧩 Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────┐
@@ -121,23 +144,23 @@ Can be toggled off for raw output.
 
 ---
 
-## Quick Start
+## ⚡ Quick Start
 
-### Prerequisites
+### ✅ Prerequisites
 
 - A **Google Gemini API key** — [Get one free here](https://aistudio.google.com/apikey)
 - Optionally: A **Higgsfield API Key ID + Secret** — [cloud.higgsfield.ai](https://cloud.higgsfield.ai)
 - Optionally: An **OpenAI API key** (for GPT-4o screenshot detection) — [platform.openai.com](https://platform.openai.com)
 - Optionally: An **Anthropic API key** (for Claude screenshot detection) — [console.anthropic.com](https://console.anthropic.com)
 
-### Option 1: Run on Claude.ai
+### 🧪 Option 1: Run on Claude.ai
 
 1. Copy the entire React component from `src/ThemeForge.tsx`
 2. Paste into a Claude.ai artifact (React type)
 3. Enter your API key in the app
 4. Start generating
 
-### Option 2: Run Locally
+### 💻 Option 2: Run Locally
 
 ```bash
 # Clone the repo
@@ -151,7 +174,7 @@ npm install
 npm run dev
 ```
 
-### Option 3: Deploy to Vercel
+### 🚀 Option 3: Deploy to Vercel
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/MrHalder/themeforge)
 
@@ -160,16 +183,16 @@ npm run dev
 
 ---
 
-## Usage
+## 🧪 Usage
 
-### Screenshot Detection Mode
+### 🧠 Screenshot Detection Mode
 
 1. Take a screenshot of your iPhone home screen
 2. Upload it to ThemeForge
 3. Gemini Vision will identify all visible apps
 4. Review and edit the detected list (add/remove apps)
 
-### Manual Entry Mode
+### ✍️ Manual Entry Mode
 
 1. Type app names separated by commas, or
 2. Click quick-pick buttons for 60+ popular apps including:
@@ -178,7 +201,7 @@ npm run dev
    - Productivity: Slack, Notion, Zoom, Microsoft Teams, Outlook
    - India-specific: Swiggy, Zomato, PhonePe, GPay, CRED, Groww, Zerodha, Ola, Rapido
 
-### Theme Presets
+### 🎨 Theme Presets
 
 | Preset       | Description                         |
 | ------------ | ----------------------------------- |
@@ -190,7 +213,7 @@ npm run dev
 | Light Mode   | Black symbols on white              |
 | Custom       | Write your own prompt               |
 
-### Custom Prompt Tips
+### 🧩 Custom Prompt Tips
 
 Be specific about:
 
@@ -209,9 +232,9 @@ iOS app icon, square
 
 ---
 
-## Post-Processing
+## 🧵 Post-Processing
 
-### iOS Superellipse Corners
+### 🍎 iOS Superellipse Corners
 
 Standard CSS `border-radius` creates circular corners. iOS uses a **continuous superellipse** (squircle) — a mathematically different curve that creates smoother, more organic corners.
 
@@ -228,7 +251,7 @@ Standard border-radius:     iOS superellipse:
 
 ThemeForge approximates the iOS curve using cubic bezier paths at a **22.37% radius ratio** — matching Apple's actual implementation.
 
-### Sharpening
+### ✨ Sharpening
 
 AI-generated icons at 512px tend to be slightly soft. The unsharp mask pass:
 
@@ -236,15 +259,15 @@ AI-generated icons at 512px tend to be slightly soft. The unsharp mask pass:
 2. Amplifies the difference between original and blur
 3. Applies at 30% intensity — enough for crispness, no haloing
 
-### Toggle
+### 🎚️ Toggle
 
 Post-processing can be disabled entirely via the toggle in Setup. Raw AI output will be exported as-is.
 
 ---
 
-## Providers
+## 🔌 Providers
 
-### Google Gemini (Recommended)
+### ✅ Google Gemini (Recommended)
 
 - **Detection model**: `gemini-2.5-flash` (vision)
 - **Generation models** (selectable in Setup):
@@ -258,7 +281,7 @@ API Flow: prompt → generateContent → base64 PNG in response
 Latency: ~3-5 seconds per icon
 ```
 
-### Higgsfield (Alternative)
+### ⚡ Higgsfield (Alternative)
 
 - **Base URL**: `platform.higgsfield.ai`
 - **Auth**: Two-part key — API Key ID + API Key Secret (header: `Key {id}:{secret}`)
@@ -274,7 +297,7 @@ Latency: ~10-30 seconds per icon (queue dependent)
 
 > **Note**: Higgsfield requires a paid plan. API Key ID and Secret are provided in your dashboard at [cloud.higgsfield.ai](https://cloud.higgsfield.ai).
 
-### Detection Providers
+### 🔍 Detection Providers
 
 Screenshot app detection supports three AI providers (selectable in Setup when using screenshot mode):
 
@@ -286,7 +309,7 @@ Screenshot app detection supports three AI providers (selectable in Setup when u
 
 Detection provider is independent of generation provider — you can use OpenAI for detection + Gemini for generation, etc.
 
-### Detection History (IndexedDB)
+### 🧠 Detection History (IndexedDB)
 
 ThemeForge persists every detection session locally using IndexedDB:
 
@@ -297,11 +320,11 @@ ThemeForge persists every detection session locally using IndexedDB:
 
 ---
 
-## Focus Modes
+## 🎯 Focus Modes
 
 ThemeForge generates a complete Focus Mode setup in every zip:
 
-### How It Works on iOS
+### 📱 How It Works on iOS
 
 1. **Work Mode** — Shows only work-related apps on a dedicated home screen page
 2. **Home Mode** — Shows personal/entertainment apps on a separate page
@@ -310,7 +333,7 @@ ThemeForge generates a complete Focus Mode setup in every zip:
    - **Location**: Office WiFi/GPS = Work, Home = Personal
    - **Smart Activation**: iOS learns your patterns
 
-### manifest.json Structure
+### 🧾 manifest.json Structure
 
 ```json
 {
@@ -338,13 +361,13 @@ ThemeForge generates a complete Focus Mode setup in every zip:
 }
 ```
 
-### URL Schemes
+### 🔗 URL Schemes
 
 ThemeForge ships with **90+ pre-mapped URL schemes** for popular apps. The manifest includes these for advanced users who want to build custom Shortcuts automations.
 
 ---
 
-## Output Structure
+## 📦 Output Structure
 
 ```
 themeforge_minimal-bw_512px_1738934400000.zip
@@ -363,7 +386,7 @@ themeforge_minimal-bw_512px_1738934400000.zip
 
 ---
 
-## Limitations
+## 🚧 Limitations
 
 Being upfront about what this can and can't do:
 
@@ -377,7 +400,7 @@ Being upfront about what this can and can't do:
 
 ---
 
-## Project Structure
+## 🧱 Project Structure
 
 ```
 themeforge/
@@ -393,11 +416,12 @@ themeforge/
 │   ├── themeforge-banner.svg
 │   ├── demo-flow.svg
 │   └── screenshots/
-│       ├── step-1-setup.svg
-│       ├── step-2-detect.svg
-│       ├── step-3-theme.svg
-│       ├── step-4-generate.svg
-│       └── step-5-download.svg
+│       ├── step-1-setup.png
+│       ├── step-2-detect.png
+│       ├── step-3-theme.png
+│       ├── step-4-generate.png
+│       ├── step-5-download.png
+│       └── raw/ (base screenshots)
 ├── index.html
 ├── package.json
 ├── tsconfig.json
@@ -410,7 +434,7 @@ themeforge/
 
 ---
 
-## Roadmap
+## 🗺️ Roadmap
 
 - [ ] Batch retry with alternative prompts for failed icons
 - [ ] Icon style preview before full generation (generate 1 sample first)
@@ -422,7 +446,7 @@ themeforge/
 
 ---
 
-## FAQ
+## ❓ FAQ
 
 **Q: Do I need all the API keys?**
 No. You need a **generation provider key** (Gemini or Higgsfield) and a **detection provider key** (Gemini, OpenAI, or Anthropic) only if you're using screenshot detection. Manual app entry requires no detection key. You can mix providers — e.g., OpenAI for detection + Gemini for generation.
@@ -444,7 +468,7 @@ Add more specificity to your prompt. Include exact details like "2px white strok
 
 ---
 
-## Contributing
+## 🤝 Contributing
 
 Contributions welcome. Particularly interested in:
 
@@ -460,7 +484,7 @@ git checkout -b feature/your-feature
 
 ---
 
-## License
+## 📄 License
 
 MIT — do whatever you want with it.
 
